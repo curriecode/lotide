@@ -7,14 +7,14 @@ const eqArrays = function (arr1, arr2) {
   return true;
 };
 
-const assertArraysEqual = function (arr1) {
-  if (arr1 === true) {
+const assertArraysEqual = function (arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
     console.log(`✅✅✅ Assertion Passed: is a match`);
   } else {
     console.log(`❌❌❌ Assertion Failed: is no match`);
   }
-}
+};
 
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertArraysEqual(eqArrays([1, 2, 2], [1, 2, 3]), false); // => should NOT PASS
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 2], [1, 2, 3]); // => should NOT PASS
 
