@@ -1,16 +1,10 @@
 // const assertEqual = require('./assertEqual.js');
 
-
 const tail = (input) => {
-  let newArray = [];
-  for (let i = 0; i <= input.length; i++) {
-    if (input[i] > input[0]) {
-      newArray.push(input[i]);
-    }
-  }
-  return newArray;
+  let newArr = input;
+  return newArr.slice(1);
 };
-
+tail(["Yo Yo", "Lighthouse", "Labs"]);
 
 
 module.exports = tail;
